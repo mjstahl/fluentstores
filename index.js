@@ -1,12 +1,14 @@
+'use strict'
+
 function fluentInterfaceFor(store) {
-  const interface = {};
+  const fluentInterface = {};
   ['setItem', 'removeItem'].forEach(fn => {
-    interface[fn] = function() {
+    fluentInterface[fn] = function() {
       store[fn].call(store, arguments);
-      return store;
+      return this;
     };
   });
-  return interface;
+  return fluentInterface;
 };
 
 module.exports = {
