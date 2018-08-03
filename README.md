@@ -33,8 +33,8 @@ When passed a key name, will remove that key from the storage.
 
 ```js
 localStore
-  .removeItem('bgcolor', 'yellow');
-  .removeItem('font', 'Helvetica');
+  .removeItem('bgcolor');
+  .removeItem('font');
 
 window.localStorage.length //-> 1
 ```
