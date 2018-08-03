@@ -20,8 +20,8 @@ When passed a key name and value, will add that key to the storage, or update th
 
 ```js
 localStore
-  .setItem('bgcolor', 'yellow');
-  .setItem('font', 'Helvetica');
+  .setItem('bgcolor', 'yellow')
+  .setItem('font', 'Helvetica')
   .setItem('image', 'cats.png');
 
 window.localStorage.length //-> 3
@@ -33,7 +33,7 @@ When passed a key name, will remove that key from the storage.
 
 ```js
 localStore
-  .removeItem('bgcolor');
+  .removeItem('bgcolor')
   .removeItem('font');
 
 window.localStorage.length //-> 1
