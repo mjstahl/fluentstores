@@ -15,6 +15,7 @@ const sessionStore = require('@mjstahl/fluentstores/session')
 ## Storage
 
 `Storage.setItem(name: DOMString, value: DOMString) -> Storage`
+
 When passed a key name and value, will add that key to the storage, or update that key's value if it already exists.
 
 ```js
@@ -27,6 +28,7 @@ window.localStorage.length //-> 3
 ```
 
 `Store.removeItem(name: DOMString) -> Storage`
+
 When passed a key name, will remove that key from the storage.
 
 ```js
