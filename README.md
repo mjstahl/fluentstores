@@ -1,5 +1,5 @@
 # fluentstores
-Fluent interface for Window.localStorage and Window.sessionStorage
+Fluent interface for Window.localStorage and Window.sessionStorage.
 
 ## Installation
 
@@ -27,7 +27,7 @@ localStore
 window.localStorage.length //-> 3
 ```
 
-`Store.removeItem(name: DOMString) -> Storage`
+`Storage.removeItem(name: DOMString) -> Storage`
 
 When passed a key name, will remove that key from the storage.
 
