@@ -4,7 +4,7 @@ function fluentInterfaceFor(store) {
   const fluentInterface = {};
   ['setItem', 'removeItem'].forEach(fn => {
     fluentInterface[fn] = function() {
-      store[fn].call(store, arguments);
+      store[fn].apply(store, arguments);
       return this;
     };
   });
