@@ -1,0 +1,23 @@
+{
+  "name": "@mjstahl/fluentstores",
+  "version": "0.1.0",
+  "description": "Fluent interface for Window.localStorage and Window.sessionStorage",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjstahl/fluentstores.git"
+  },
+  "keywords": [
+    "sessionStorage",
+    "localStorage",
+    "DOM",
+    "JavaScript"
+  ],
+  "author": "Mark Stahl <mjstahl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mjstahl/fluentstores/issues"
+  },
+  "homepage": "https://github.com/mjstahl/fluentstores#readme"
+}

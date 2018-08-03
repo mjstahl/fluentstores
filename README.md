@@ -8,8 +8,13 @@ $ npm install --save @mjstahl/fluentstores
 ```
 
 ```js
-const localStore = require('@mjstahl/fluentstores/local')
-const sessionStore = require('@mjstahl/fluentstores/session')
+const storage = require('@mjstahl/fluentstores');
+
+// localStorage
+storage.local
+
+// sessionStorage
+storage.session
 ```
 
 ## Storage
@@ -19,7 +24,7 @@ const sessionStore = require('@mjstahl/fluentstores/session')
 When passed a key name and value, will add that key to the storage, or update that key's value if it already exists.
 
 ```js
-localStore
+storage.local
   .setItem('bgcolor', 'yellow')
   .setItem('font', 'Helvetica')
   .setItem('image', 'cats.png');
@@ -32,7 +37,7 @@ window.localStorage.length //-> 3
 When passed a key name, will remove that key from the storage.
 
 ```js
-localStore
+storage.local
   .removeItem('bgcolor')
   .removeItem('font');
 
