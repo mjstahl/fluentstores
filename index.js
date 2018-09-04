@@ -1,17 +1,21 @@
 'use strict'
 
-function fluentInterfaceFor(store) {
-  const fluentInterface = {};
-  ['setItem', 'removeItem'].forEach(fn => {
-    fluentInterface[fn] = function() {
-      store[fn].apply(store, arguments);
-      return this;
-    };
-  });
-  return fluentInterface;
+const handler = {
+  get: function(target, prop) {
+    const attr = target[prop];
+    if (typeof attr === 'function') {
+      return new Proxy(attr.bind(target), {
+        apply: function(target, self, args) {
+          const result = target(...args);
+          return (!!result || result === null) ? result : self;
+        }
+      });
+    }
+    return target[prop];
+  }
 };
 
 module.exports = {
-  local: fluentInterfaceFor(window.localStorage),
-  session: fluentInterfaceFor(window.sessionStorage)
+  local: new Proxy(window.localStorage, handler),
+  session: new Proxy(window.sessionStorage, handler)
 };
