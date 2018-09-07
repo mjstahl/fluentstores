@@ -43,3 +43,14 @@ storage.local
 
 window.localStorage.length //-> 1
 ```
+
+`Storage.clear() -> Storage`
+
+When invoked, will empty all keys out of the storage.
+
+```js
+storage.local
+  .clear()
+  .setItem('bgcolor', 'yellow')
+  .getItem('bgcolor') //-> 'yellow'
+```
